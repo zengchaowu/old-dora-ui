@@ -6,56 +6,56 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface DoraButton {
         /**
-          * The first name
+          * 容器class
          */
-        "first": string;
+        "containerClass"?: string;
         /**
-          * The last name
+          * 文本
          */
-        "last": string;
+        "label"?: string;
         /**
-          * The middle name
+          * 文本class
          */
-        "middle": string;
+        "labelClass"?: string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLDoraButtonElement extends Components.DoraButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLDoraButtonElement: {
+        prototype: HTMLDoraButtonElement;
+        new (): HTMLDoraButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "dora-button": HTMLDoraButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface DoraButton {
         /**
-          * The first name
+          * 容器class
          */
-        "first"?: string;
+        "containerClass"?: string;
         /**
-          * The last name
+          * 文本
          */
-        "last"?: string;
+        "label"?: string;
         /**
-          * The middle name
+          * 文本class
          */
-        "middle"?: string;
+        "labelClass"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "dora-button": DoraButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "dora-button": LocalJSX.DoraButton & JSXBase.HTMLAttributes<HTMLDoraButtonElement>;
         }
     }
 }
