@@ -5,20 +5,18 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { ButtonAppearance, ButtonContent } from "./components/dora-button/dora-button";
+export { ButtonAppearance, ButtonContent } from "./components/dora-button/dora-button";
 export namespace Components {
     interface DoraButton {
         /**
-          * 容器class
+          * 外观
          */
-        "containerClass"?: string;
+        "appearance"?: ButtonAppearance;
         /**
-          * 文本
+          * 内容
          */
-        "label"?: string;
-        /**
-          * 文本class
-         */
-        "labelClass"?: string;
+        "content"?: ButtonContent;
     }
 }
 declare global {
@@ -35,17 +33,13 @@ declare global {
 declare namespace LocalJSX {
     interface DoraButton {
         /**
-          * 容器class
+          * 外观
          */
-        "containerClass"?: string;
+        "appearance"?: ButtonAppearance;
         /**
-          * 文本
+          * 内容
          */
-        "label"?: string;
-        /**
-          * 文本class
-         */
-        "labelClass"?: string;
+        "content"?: ButtonContent;
     }
     interface IntrinsicElements {
         "dora-button": DoraButton;

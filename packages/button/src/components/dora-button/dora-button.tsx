@@ -1,32 +1,32 @@
 import { Component, Prop, Host, h } from '@stencil/core';
 
+export interface ButtonAppearance {
+  container: string;
+  label: string;
+}
+
+export interface ButtonContent {
+  label: string;
+}
+
 @Component({
   tag: 'dora-button',
 })
 export class DoraButton {
-  defaultSettings = {
-    containerClass: 'p-2 bg-red-400 rounded-xl cursor-pointer hover:bg-red-200',
-    labelClass: 'text-sm font-bold underline',
-  };
-
   /**
-   * 容器class
+   * 外观
    */
-  @Prop() containerClass?: string = this.defaultSettings.containerClass;
+  @Prop() appearance?: ButtonAppearance;
   /**
-   * 文本class
+   * 内容
    */
-  @Prop() labelClass?: string = this.defaultSettings.labelClass;
-  /**
-   * 文本
-   */
-  @Prop() label?: string;
+  @Prop() content?: ButtonContent;
 
   render() {
     return (
       <Host>
-        <button class={this.containerClass}>
-          <span class={this.labelClass}>{this.label}</span>
+        <button class={this.appearance?.container}>
+          <span class={this.appearance?.label}>{this.content?.label}</span>
         </button>
       </Host>
     );

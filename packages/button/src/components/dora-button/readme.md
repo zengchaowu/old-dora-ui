@@ -7,11 +7,10 @@
 
 ## Properties
 
-| Property         | Attribute         | Description | Type     | Default                               |
-| ---------------- | ----------------- | ----------- | -------- | ------------------------------------- |
-| `containerClass` | `container-class` | 容器class     | `string` | `this.defaultSettings.containerClass` |
-| `label`          | `label`           | 文本          | `string` | `undefined`                           |
-| `labelClass`     | `label-class`     | 文本class     | `string` | `this.defaultSettings.labelClass`     |
+| Property     | Attribute | Description | Type               | Default     |
+| ------------ | --------- | ----------- | ------------------ | ----------- |
+| `appearance` | --        | 外观          | `ButtonAppearance` | `undefined` |
+| `content`    | --        | 内容          | `ButtonContent`    | `undefined` |
 
 
 ----------------------------------------------
